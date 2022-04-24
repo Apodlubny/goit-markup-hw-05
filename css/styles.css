@@ -291,9 +291,6 @@ img {
 .team {
   background-color: var(--tertiary-bgc);
 }
-.team.section {
-  padding-top: 0;
-}
 
 .team-list {
   display: flex;
@@ -332,26 +329,15 @@ img {
   align-items: center;
   justify-content: center;
   color: var(--social-icons);
-  transition: background-color var(--main-transition);
+  transition: background-color var(--main-transition), color var(--main-transition);
 }
 .social-icon {
   fill: currentColor;
 }
-/* .social-link:hover, .social-link:focus {
-  background-color: var(--accent-color);
-}
-.social-link:hover .social-icon, .social-link:focus .social-icon {
-  fill: var(--primary-white);
-} */
-
-/* .social-link:hover, .social-link:focus {
+.social-link:hover, .social-link:focus {
   background-color: var(--accent-color);
   color: var(--primary-white);
 }
-.social-icon {
-  fill: currentColor;
-} */
-
 
 .team-list .text {
   font-size: 16px;
@@ -375,19 +361,13 @@ img {
   height: 92px;
   border: 1px solid var(--social-icons);
   border-radius: 4px;
-  transition: border var(--main-transition);
-}
-.client-logo {
   fill: var(--social-icons);
-  transition: fill var(--main-transition);
+  transition: border var(--main-transition), fill var(--main-transition);
 }
 
-.client-link:hover .client-logo,
-.client-link:focus .client-logo{
-  fill: var(--accent-color);
-}
 .client-link:hover, .client-link:focus {
   border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
 }
 
 
@@ -541,6 +521,20 @@ transition: transform var(--main-transition);
   margin-bottom: 20px;
   color: var(--primary-white);
 }
+.footer-social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-white);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--main-transition);
+}
+.footer-social-link:hover, .footer-social-link:focus {
+  background-color: var(--accent-color);
+}
 .address-box {
   margin-right: 70px;
 }
@@ -554,12 +548,7 @@ transition: transform var(--main-transition);
   color: var(--primary-white);
   background-color: rgba(255, 255, 255, 0.1);
 }
-.social-link:hover, .social-link:focus {
-  background-color: var(--accent-color);
-}
-.social-link:hover .social-icon, .social-link:focus .social-icon {
-  fill: var(--primary-white);
-}
+
 .address .link {
   font-style: normal;
   line-height: 1.71;
